@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * _printf - Produces formatted output according to a format string
+ * @format: The format string
+ *
+ * Return: Number of characters printed
+ */
 int _printf(const char *format, ...)
 {
 	int i = 0;
@@ -38,6 +44,12 @@ int _printf(const char *format, ...)
 	return (count);
 }
 
+/**
+ * check_specifier - Determines the appropriate function for a specifier
+ * @f: Specifier character
+ *
+ * Return: Pointer to the corresponding function or NULL
+ */
 int (*check_specifier(char *f))(va_list)
 {
 	int i = 0;
