@@ -11,7 +11,7 @@ int _printf(const char *format, ...)
 	int i = 0;
 	int count = 0;
 
-	if (format == NULL)
+	if (format == NULL || format[0] == '%' && format[1] == '\0')
 		return (-1);
 
 	va_list args;
@@ -29,7 +29,7 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
-				count += check_specifier(format[i + 1], args);
+				count += check_specifier(&format[i + 1])(args);
 				i++;
 			}
 		}
