@@ -41,10 +41,6 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			while (format[i + 1] == ' ')
-			{
-				i++;
-			}
 			if (_check_valid_format(format[i + 1]) == 0)
 			{
 				count += check_specifier(format[i + 1], args);
