@@ -5,6 +5,8 @@ int _printf(const char *format, ...)
 	int i = 0;
 	int count = 0;
 
+	if (format == NULL)
+		return (-1);
 
 	va_list args;
 	va_start(args,format);
@@ -31,3 +33,4 @@ int _printf(const char *format, ...)
 	return (count);
 }
 
+int (*check_specifier)(char *f,)
