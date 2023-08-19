@@ -22,8 +22,14 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
-				check_specifier(format[i+1], args);
+				count += check_specifier(format[i+1], args);
+				i++;
 			}
+		}
+		else
+		{
+			_putchar(format[i]);
+			count++;
 		}
 		i++;
 	}
@@ -36,12 +42,15 @@ int (*check_specifier(char *f))(va_list)
 {
 	int i = 0;
 	specifier_t checker_fct[] = {
-		{'c',print_single_char_c},
-		{'s',print_string_s}
-	}
-	while (check_fc)
+		{"c",print_single_char_c},
+		{"s",print_string_s},
+		{NULL,NULL}
+	};
+	while (checker_fct[i].str != NULL)
 	{
-		/* code */
+		if (strcmp(checker_fct[i].str, f) == 0)
+			break;
+		i++;
 	}
-
+	return (checker_fct[i].fct_op);
 }
