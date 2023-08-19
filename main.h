@@ -16,14 +16,20 @@ int _putchar(char c);
  * @fct_op: Pointer to the corresponding printing function
  */
 typedef struct specifier{
-	char *str;
+	char str;
 	int (*fct_op)(va_list);
 } specifier_t;
-int (*check_specifier(char *f))(va_list);
+
+int check_specifier(const char f,va_list);
 int _puts(char *s);
+int _strlen(char *s);
+int _check_valid_format(const char f);
+
 
 
 int print_single_char_c(va_list args);
 int print_string_s(va_list args);
+int print_pourcen(va_list args);
+
 
 #endif

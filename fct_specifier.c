@@ -27,7 +27,18 @@ int print_string_s(va_list args)
 
 	str = va_arg(args, char *);
 	if (str == NULL)
-		return (_puts("null"));
-		
+		return (_puts("(null)"));
 	return (_puts(str));
+}
+
+/**
+ * print_pourcen - Prints a percent sign (%)
+ * @args: Argument list (not used in this function)
+ *
+ * Return: Always returns 1 (number of characters printed)
+ */
+int print_pourcen(va_list args)
+{
+	_putchar('%');
+	return (1);
 }

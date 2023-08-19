@@ -1,5 +1,24 @@
 #include "main.h"
+/**
+ * _check_valid_format - Checks if a character is a valid format
+ * @f: The character to check
+ *
+ * Return: 0 if character is valid, 1 otherwise
+ */
+int _check_valid_format(const char f)
+{
+	int i = 0;
+	char s[] = {'s', 'c', '%'};
 
+	while (s[i])
+	{
+		if (s[i] == f)
+			return (0);
+
+		i++;
+	}
+	return (1);
+}
 /**
  * _printf - Produces formatted output according to a format string
  * @format: The format string
@@ -21,15 +40,9 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			if (format[i + 1] == '%')
+			if (_check_valid_format(format[i + 1]) == 0)
 			{
-				_putchar('%');
-				count++;
-				return (count);
-			}
-			else
-			{
-				count += check_specifier(&format[i + 1])(args);
+				count += check_specifier(format[i + 1], args);
 				i++;
 			}
 		}
@@ -48,22 +61,26 @@ int _printf(const char *format, ...)
 /**
  * check_specifier - Determines the appropriate function for a specifier
  * @f: Specifier character
- *
+ * @args: argument passes to the fucntion
  * Return: Pointer to the corresponding function or NULL
- */
-int (*check_specifier(char *f))(va_list)
+*/
+
+int check_specifier(const char f, va_list args)
 {
 	int i = 0;
+	int structsize;
+
 	specifier_t checker_fct[] = {
-		{"c", print_single_char_c},
-		{"s", print_string_s},
-		{NULL, NULL}
+		{'c', print_single_char_c},
+		{'s', print_string_s},
+		{'%', print_pourcen}
 	};
-	while (checker_fct[i].str != NULL)
+	structsize = sizeof(checker_fct) / sizeof(checker_fct[0]);
+	while (structsize >= 0)
 	{
-		if (strcmp(checker_fct[i].str, f) == 0)
+		if (f == checker_fct[structsize].str)
 			break;
-		i++;
+		structsize--;
 	}
-	return (checker_fct[i].fct_op);
+	return (checker_fct[structsize].fct_op(args));
 }
