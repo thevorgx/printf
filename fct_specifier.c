@@ -22,7 +22,6 @@ int print_single_char_c(va_list args)
  */
 int print_string_s(va_list args)
 {
-	int count = 0;
 	char *str;
 
 	str = va_arg(args, char *);
@@ -39,6 +38,8 @@ int print_string_s(va_list args)
  */
 int print_pourcen(va_list args)
 {
+	(void)args;
+
 	_putchar('%');
 	return (1);
 }

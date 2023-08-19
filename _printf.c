@@ -29,15 +29,12 @@ int _printf(const char *format, ...)
 {
 	int i = 0;
 	int count = 0;
+	va_list args;
 
-	if (format == NULL )
+	if (format == NULL)
 		return (-1);
 	if (checkPercentageAfter(format) == 0)
 		return (0);
-
-
-
-	va_list args;
 
 	va_start(args, format);
 	while (format[i])
@@ -79,7 +76,6 @@ int _printf(const char *format, ...)
 
 int check_specifier(const char f, va_list args)
 {
-	int i = 0;
 	int structsize;
 
 	specifier_t checker_fct[] = {

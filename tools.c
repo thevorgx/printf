@@ -16,12 +16,18 @@ int _strlen(char *s)
 	}
 	return (length);
 }
-
+/**
+ * checkPercentageAfter - Checks if there are characters
+ * @f: The string to check
+ *
+ * Return: 0 if only spaces follow '%', 1 otherwise
+ */
 int checkPercentageAfter(const char *f)
 {
 	if (f[0] == '%')
 	{
 		int j = 1;
+
 		while (f[j])
 		{
 			if (f[j] != ' ')
