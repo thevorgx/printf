@@ -34,8 +34,14 @@ int _printf(const char *format, ...)
 
 int (*check_specifier(char *f))(va_list)
 {
-	fct checker_fct[] = {
+	int i = 0;
+	specifier_t checker_fct[] = {
 		{'c',print_single_char_c},
 		{'s',print_string_s}
 	}
+	while (check_fc)
+	{
+		/* code */
+	}
+
 }

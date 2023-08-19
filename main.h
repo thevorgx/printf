@@ -9,11 +9,11 @@
 int _printf(const char *format, ...);
 int _putchar(char c);
 
-typdef struct fct
-{
+typdef struct specifier{
 	char str;
 	int (*fct_op)(va_list);
-}fct;
+} specifier_t;
+
 int print_single_char_c(va_list args);
 int print_string_s(va_list args);
 
