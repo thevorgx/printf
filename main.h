@@ -9,10 +9,10 @@
 int _printf(const char *format, ...);
 int _putchar(char c);
 
-/*typdef struct fct
+typdef struct fct
 {
 	char *str;
 	int (*fct_op)()
 }fct;
-*/
+
 #endif

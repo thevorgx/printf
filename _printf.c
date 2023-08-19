@@ -18,6 +18,11 @@ int _printf(const char *format, ...)
 				count++;
 				return (count);
 			}
+			else
+			{
+				//create fucntion parameters formation specifier and args
+				check_specifier(format[i+1], args);
+			}
 		}
 		i++;
 	}
@@ -26,8 +31,3 @@ int _printf(const char *format, ...)
 	return (count);
 }
 
-int main()
-{
-	_printf("%%");
-	return 0;
-}
