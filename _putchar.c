@@ -22,8 +22,18 @@ int _puts(char *s)
 
 	while (s[i])
 	{
-		_putchar(s[i]);
-		i++;
+		if (s[i] == '\n')
+		{
+			_putchar('\n');
+			_putchar('\r');
+			i++;
+		}
+		else
+		{
+			_putchar(s[i]);
+			i++;
+		}
+
 	}
 	return (i);
 }

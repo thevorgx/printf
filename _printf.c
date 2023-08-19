@@ -40,6 +40,10 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
+			while (format[i + 1] == ' ')
+			{
+				i++;
+			}
 			if (_check_valid_format(format[i + 1]) == 0)
 			{
 				count += check_specifier(format[i + 1], args);
@@ -79,7 +83,7 @@ int check_specifier(const char f, va_list args)
 		{'s', print_string_s},
 		{'%', print_pourcen}
 	};
-	structsize = sizeof(checker_fct) / sizeof(checker_fct[0]);
+	structsize = sizeof(checker_fct) / sizeof(checker_fct[0]) - 1;
 	while (structsize >= 0)
 	{
 		if (f == checker_fct[structsize].str)
