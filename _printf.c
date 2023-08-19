@@ -15,12 +15,13 @@ int _printf(const char *format, ...)
 		return (-1);
 
 	va_list args;
-	va_start(args,format);
+
+	va_start(args, format);
 	while (format[i])
 	{
 		if (format[i] == '%')
 		{
-			if (format[i+1] == '%')
+			if (format[i + 1] == '%')
 			{
 				_putchar('%');
 				count++;
@@ -28,7 +29,7 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
-				count += check_specifier(format[i+1], args);
+				count += check_specifier(format[i + 1], args);
 				i++;
 			}
 		}
@@ -54,9 +55,9 @@ int (*check_specifier(char *f))(va_list)
 {
 	int i = 0;
 	specifier_t checker_fct[] = {
-		{"c",print_single_char_c},
-		{"s",print_string_s},
-		{NULL,NULL}
+		{"c", print_single_char_c},
+		{"s", print_string_s},
+		{NULL, NULL}
 	};
 	while (checker_fct[i].str != NULL)
 	{
