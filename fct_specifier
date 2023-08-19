@@ -1,0 +1,27 @@
+#include "main.h"
+
+
+int print_single_char_c(va_list args)
+{
+	char c;
+
+	c = va_arg(args, int);
+	_putchar(c);
+	return (1);
+}
+
+int print_string_s(va_list args)
+{
+	int count = 0;
+	char *str;
+
+	str = va_arg(args, char *);
+	if (str == NULL)
+		return (-1);
+	while (str[count])
+	{
+		_putchar(str);
+		count++;
+	}
+	return (count);
+}

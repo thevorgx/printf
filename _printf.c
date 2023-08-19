@@ -22,7 +22,6 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
-				//create fucntion parameters formation specifier and args
 				check_specifier(format[i+1], args);
 			}
 		}
@@ -33,4 +32,10 @@ int _printf(const char *format, ...)
 	return (count);
 }
 
-int (*check_specifier)(char *f,)
+int (*check_specifier(char *f))(va_list)
+{
+	fct checker_fct[] = {
+		{'c',print_single_char_c},
+		{'s',print_string_s}
+	}
+}
