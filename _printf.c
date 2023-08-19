@@ -45,6 +45,10 @@ int _printf(const char *format, ...)
 				count += check_specifier(format[i + 1], args);
 				i++;
 			}
+			else if (format[i + 1] == '\0')
+			{
+				return (-1);
+			}
 		}
 		else
 		{
