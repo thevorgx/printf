@@ -24,6 +24,7 @@ int check_specifier(const char f,va_list);
 int _puts(char *s);
 int _strlen(char *s);
 int _check_valid_format(const char f);
+int checkPercentageAfter(const char *f);
 
 
 

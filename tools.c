@@ -16,3 +16,19 @@ int _strlen(char *s)
 	}
 	return (length);
 }
+
+int checkPercentageAfter(const char *f)
+{
+	if (f[0] == '%')
+	{
+		int j = 1;
+		while (f[j])
+		{
+			if (f[j] != ' ')
+				return (1);
+			j++;
+		}
+		return (0);
+	}
+	return (1);
+}
