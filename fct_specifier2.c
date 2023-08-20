@@ -5,14 +5,14 @@ int print_unsigned(va_list args)
 	unsigned int n;
 	int count;
 
-	n = args(args, unsigned int);
+	n = va_arg(args, unsigned int);
 	if (n == 0)
 	{
 		_putchar('0');
 		return (1);
 	}
 
-	count = _printint(num);
+	count = _putint(n);
 	return (count);
 }
 
@@ -22,7 +22,7 @@ int print_octal(va_list args)
 	int i = 0;
 	char oc[33];
 
-	n = args(args, unsigned int);
+	n = va_arg(args, unsigned int);
 	if (n == 0)
 	{
 		_putchar('0');
