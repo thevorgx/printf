@@ -37,5 +37,6 @@ void _strrev(char *f);
 int print_unsigned(va_list args);
 int print_octal(va_list args);
 int print_lower_hexa(va_list args);
+int print_upper_hexa(va_list args);
 
 #endif
