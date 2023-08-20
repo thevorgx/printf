@@ -73,6 +73,8 @@ int print_bin(va_list args)
 	}
 	bin[i] == '\0';
 
+	_strrev(bin);
+	_puts(bin);
 
-
+	return (i);
 }
