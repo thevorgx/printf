@@ -42,7 +42,7 @@ int checkPercentageAfter(const char *f)
  * _strrev - Reverse a string in place.
  * @f: Pointer to the string to be reversed.
  */
-void _strrev(const char *f)
+void _strrev(char *f)
 {
 	int length;
 	int i, j;

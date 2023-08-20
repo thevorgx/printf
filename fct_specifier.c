@@ -82,7 +82,7 @@ int print_bin(va_list args)
 		n /= 2;
 		i++;
 	}
-	bin[i] == '\0';
+	bin[i] = '\0';
 
 	_strrev(bin);
 	_puts(bin);
