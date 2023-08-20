@@ -50,7 +50,7 @@ int _putint(int n)
 	int count = 0;
 	unsigned int num;
 	
-	if (n < 0)
+	if (n < 0 && n / 10 == 0)
 	{
 		_putchar ('-');
 		count++;
