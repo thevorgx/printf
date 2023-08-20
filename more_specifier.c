@@ -66,3 +66,15 @@ int print_upper_hexa_char(unsigned char c)
 	return (count);
 }
 
+int print_pointer(va_list args)
+{
+	int count;
+	uintptr_t ptr_value;
+
+	ptr_value = (uintptr_t)va_arg(args, void *);
+
+	count = _puts("0x");
+	count += print_lower_hexa((unsigned int)ptr_value);
+
+	return (count);
+}
