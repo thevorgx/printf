@@ -26,12 +26,14 @@ int _puts(char *s);
 int _strlen(char *s);
 int _check_valid_format(const char f);
 int checkPercentageAfter(const char *f);
+int _putint(int n);
 
 
 
 int print_single_char_c(va_list args);
 int print_string_s(va_list args);
 int print_pourcen(va_list args);
+int _printint(va_list args);
 
 
 
