@@ -8,7 +8,7 @@
 int _check_valid_format(const char f)
 {
 	int i = 0;
-	char s[] = {'s', 'c', '%','i','d'};
+	char s[] = {'s', 'c', '%', 'i', 'd'};
 
 	while (s[i])
 	{
