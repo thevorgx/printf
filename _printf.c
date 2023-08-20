@@ -8,7 +8,7 @@
 int _check_valid_format(const char f)
 {
 	int i = 0;
-	char s[] = {'s', 'c', '%', 'i', 'd','b'};
+	char s[] = {'s', 'c', '%', 'i', 'd', 'b'};
 
 	while (s[i])
 	{
@@ -69,7 +69,6 @@ int _printf(const char *format, ...)
  * @args: argument passes to the fucntion
  * Return: Pointer to the corresponding function or NULL
 */
-
 int check_specifier(const char f, va_list args)
 {
 	int structsize;
