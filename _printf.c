@@ -8,7 +8,7 @@
 int _check_valid_format(const char f)
 {
 	int i = 0;
-	char s[] = {'s', 'c', '%', 'i', 'd'};
+	char s[] = {'s', 'c', '%', 'i', 'd','b'};
 
 	while (s[i])
 	{
@@ -79,7 +79,8 @@ int check_specifier(const char f, va_list args)
 		{'s', print_string_s},
 		{'%', print_pourcen},
 		{'i', _printint},
-		{'d', _printint}
+		{'d', _printint},
+		{'b', print_bin}
 	};
 	structsize = sizeof(checker_fct) / sizeof(checker_fct[0]) - 1;
 	while (structsize >= 0)

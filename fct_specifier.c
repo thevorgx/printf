@@ -56,3 +56,9 @@ int _printint(va_list args)
 	n = va_arg(args, int);
 	return (_putint(n));
 }
+int print_bin(va_list args)
+{
+	unsigned int n;
+
+	n = va_arg(args,unsigned int);
+}
