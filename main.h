@@ -28,8 +28,6 @@ int _check_valid_format(const char f);
 int checkPercentageAfter(const char *f);
 int _putint(int n);
 
-
-
 int print_single_char_c(va_list args);
 int print_string_s(va_list args);
 int print_pourcen(va_list args);
@@ -38,9 +36,5 @@ int print_bin(va_list args);
 void _strrev(char *f);
 int print_unsigned(va_list args);
 int print_octal(va_list args);
-
-
-
-
 
 #endif
