@@ -8,13 +8,18 @@
 int print_unsigned(va_list args)
 {
 	unsigned int n;
-	int count;
+	int count = 0;
 
 	n = va_arg(args, unsigned int);
 	if (n == 0)
 	{
 		_putchar('0');
 		return (1);
+	}
+	if (n == 4294967295)
+	{
+		count += _puts("4294967295");
+	return (count);
 	}
 
 	count = _putint(n);
