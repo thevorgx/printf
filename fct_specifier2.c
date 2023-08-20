@@ -1,5 +1,10 @@
 #include "main.h"
-
+/**
+ * print_unsigned - Prints an unsigned integer
+ * @args: The va_list containing the unsigned int argument
+ *
+ * Return: The number of characters printed
+ */
 int print_unsigned(va_list args)
 {
 	unsigned int n;
@@ -15,7 +20,12 @@ int print_unsigned(va_list args)
 	count = _putint(n);
 	return (count);
 }
-
+/**
+ * print_octal - Prints an unsigned integer in octal format
+ * @args: The va_list containing the unsigned int argument
+ *
+ * Return: The number of characters printed
+ */
 int print_octal(va_list args)
 {
 	unsigned int n;
@@ -40,7 +50,13 @@ int print_octal(va_list args)
 
 	return (i);
 }
-
+/**
+ * print_lower_hexa - Prints an unsigned integer
+ * in lowercase hexadecimal format
+ * @args: The va_list containing the unsigned int argument
+ *
+ * Return: The number of characters printed
+ */
 int print_lower_hexa(va_list args)
 {
 	unsigned int n;
@@ -75,7 +91,13 @@ int print_lower_hexa(va_list args)
 
 	return (i);
 }
-
+/**
+ * print_upper_hexa - Prints an unsigned integer
+ * in uppercase hexadecimal format
+ * @args: The va_list containing the unsigned int argument
+ *
+ * Return: The number of characters printed
+ */
 int print_upper_hexa(va_list args)
 {
 	unsigned int n;
