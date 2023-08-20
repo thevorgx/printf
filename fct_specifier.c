@@ -68,12 +68,12 @@ int print_bin(va_list args)
 	char bin[33];
 	int i = 0;
 
-	n = va_arg(args,unsigned int);
+	n = va_arg(args, unsigned int);
 	if (n == 0)
 	{
 		_putchar('0');
 		i++;
-		return i;
+		return (i);
 	}
 
 	while (n > 0)

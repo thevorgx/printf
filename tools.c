@@ -49,7 +49,7 @@ void _strrev(const char *f)
 	char temp;
 
 	length = _strlen(f);
-	for(i = 0, j = length - 1; i < j; i++, j--)
+	for (i = 0, j = length - 1; i < j; i++, j--)
 	{
 		temp = f[i];
 		f[i] = f[j];
