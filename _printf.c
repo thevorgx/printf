@@ -9,7 +9,7 @@ int _check_valid_format(const char f)
 {
 	int i = 0;
 	char s[] = {'s', 'c', '%', 'i', 'd', 'b', 'u', 'o',
-	'x', 'X', 'S'};
+	'x', 'X', 'S', 'p'};
 
 	while (s[i])
 	{
@@ -85,7 +85,8 @@ int check_specifier(const char f, va_list args)
 		{'o', print_octal},
 		{'x', print_lower_hexa},
 		{'X', print_upper_hexa},
-		{'S', print_string_S}
+		{'S', print_string_S},
+		{'p', print_pointer}
 	};
 	structsize = sizeof(checker_fct) / sizeof(checker_fct[0]) - 1;
 	while (structsize >= 0)
