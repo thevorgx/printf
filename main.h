@@ -26,6 +26,7 @@ int _puts(char *s);
 int _strlen(char *s);
 int _check_valid_format(const char f);
 int checkPercentageAfter(const char *f);
+int _printint(va_list args);
 
 
 
