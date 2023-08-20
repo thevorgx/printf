@@ -56,9 +56,23 @@ int _printint(va_list args)
 	n = va_arg(args, int);
 	return (_putint(n));
 }
+
 int print_bin(va_list args)
 {
 	unsigned int n;
 
 	n = va_arg(args,unsigned int);
+	char bin[];
+	int i = 0;
+
+	while (n > 0)
+	{
+		bin[i] = (n % 2) + '0';
+		n /= 2;
+		i++;
+	}
+	bin[i] == '\0';
+
+
+
 }
