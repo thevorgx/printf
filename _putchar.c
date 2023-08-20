@@ -38,6 +38,13 @@ int _puts(char *s)
 	return (i);
 }
 
+/**
+ * _putint - function prints an int value
+ * @n: int to print
+ *
+ * Return: count
+ */
+
 int _putint(int n)
 {
 	int count = 0;
