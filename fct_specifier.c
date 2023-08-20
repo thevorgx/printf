@@ -56,7 +56,12 @@ int _printint(va_list args)
 	n = va_arg(args, int);
 	return (_putint(n));
 }
-
+/**
+ * print_bin - Convert and print an unsigned integer as binary.
+ * @args: unsigned integer to be converted.
+ *
+ * Return: The number of characters printed.
+ */
 int print_bin(va_list args)
 {
 	unsigned int n;
