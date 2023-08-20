@@ -85,6 +85,11 @@ int print_lower_hexa(va_list args)
 		}
 		n /= 16;
 	}
+	while (i < 2)
+	{
+		hex[i] = '0';
+		i++;
+	}
 
 	_strrev(hex);
 	_puts(hex);
@@ -125,6 +130,11 @@ int print_upper_hexa(va_list args)
 			i++;
 		}
 		n /= 16;
+	}
+	while (i < 2)
+	{
+		hex[i] = '0';
+		i++;
 	}
 
 	_strrev(hex);

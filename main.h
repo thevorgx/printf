@@ -39,6 +39,8 @@ int print_octal(va_list args);
 int print_lower_hexa(va_list args);
 int print_upper_hexa(va_list args);
 int print_string_S(va_list args);
+int print_upper_hexa_char(unsigned char c);
+
 
 
 #endif
