@@ -78,7 +78,8 @@ int check_specifier(const char f, va_list args)
 		{'c', print_single_char_c},
 		{'s', print_string_s},
 		{'%', print_pourcen},
-		{'i', _printint}
+		{'i', _printint},
+		{'d', _printint}
 	};
 	structsize = sizeof(checker_fct) / sizeof(checker_fct[0]) - 1;
 	while (structsize >= 0)
