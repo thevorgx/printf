@@ -36,6 +36,9 @@ int print_pourcen(va_list args);
 int _printint(va_list args);
 int print_bin(va_list args);
 void _strrev(char *f);
+int print_unsigned(va_list args);
+int print_octal(va_list args);
+
 
 
 
