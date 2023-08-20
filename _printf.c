@@ -10,6 +10,7 @@ int _check_valid_format(const char f)
 	int i = 0;
 	char s[] = {'s', 'c', '%', 'i', 'd', 'b', 'u', 'o',
 	'x', 'X', 'S'};
+
 	while (s[i])
 	{
 		if (s[i] == f)
