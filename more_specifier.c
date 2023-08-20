@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * print_string_S - Prints a string
+ * @args: Argument list containing the string to be printed
+ *
+ * Return: The number of characters printed
+ */
 int print_string_S(va_list args)
 {
 	char *str;
@@ -12,7 +18,7 @@ int print_string_S(va_list args)
 
 	while (str[i])
 	{
-		if (str[i] < 32|| str[i] >= 127)
+		if (str[i] < 32 || str[i] >= 127)
 		{
 			count += _putchar('\\');
 			count += _putchar('x');
@@ -26,7 +32,12 @@ int print_string_S(va_list args)
 	}
 	return (count);
 }
-
+/**
+ * print_upper_hexa_char - Prints the upper-case hexadecimal representation
+ * @c: The character to be printed in hexadecimal
+ *
+ * Return: The number of characters printed
+ */
 int print_upper_hexa_char(unsigned char c)
 {
 	int count = 0;
@@ -52,6 +63,6 @@ int print_upper_hexa_char(unsigned char c)
 		count += _putchar(second_digit - 10 + 'A');
 	}
 
-	return count;
+	return (count);
 }
 
