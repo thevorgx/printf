@@ -60,10 +60,16 @@ int _printint(va_list args)
 int print_bin(va_list args)
 {
 	unsigned int n;
+	char bin[33];
+	int i = 0;
 
 	n = va_arg(args,unsigned int);
-	char bin[];
-	int i = 0;
+	if (n == 0)
+	{
+		_putchar('0');
+		i++;
+		return i;
+	}
 
 	while (n > 0)
 	{
