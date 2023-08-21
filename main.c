@@ -1,48 +1,42 @@
+#include <limits.h>
+#include <stdio.h>
 #include "main.h"
 
+/**
+ * main - Entry point
+ *
+ * Return: Always 0
+ */
 int main(void)
 {
-    unsigned int u1 = 12345;
-    unsigned int u2 = 987654;
-    unsigned int u3 = 0;
+    int len;
+    int len2;
+    unsigned int ui;
+    void *addr;
 
-    unsigned int o1 = 12345;
-    unsigned int o2 = 987654;
-    unsigned int o3 = 0;
-
-    unsigned int x1 = 12345;
-    unsigned int x2 = 987654;
-    unsigned int x3 = 0;
-
-    unsigned int X1 = 12345;
-    unsigned int X2 = 987654;
-    unsigned int X3 = 0;
-
-    unsigned int max_u = 4294967295;
-    unsigned int max_o = 4294967295;
-    unsigned int max_x = 4294967295;
-    unsigned int max_X = 4294967295;
-
-    _printf("u1: %u\n", u1);
-    _printf("u2: %u\n", u2);
-    _printf("u3: %u\n", u3);
-
-    _printf("o1: %o\n", o1);
-    _printf("o2: %o\n", o2);
-    _printf("o3: %o\n", o3);
-
-    _printf("x1: %x\n", x1);
-    _printf("x2: %x\n", x2);
-    _printf("x3: %x\n", x3);
-
-    _printf("X1: %X\n", X1);
-    _printf("X2: %X\n", X2);
-    _printf("X3: %X\n", X3);
-
-    _printf("max_u: %u\n", max_u);
-    _printf("max_o: %o\n", max_o);
-    _printf("max_x: %x\n", max_x);
-    _printf("max_X: %X\n", max_X);
-
+    len = _printf("Let's try to printf a simple sentence.\n");
+    len2 = printf("Let's try to printf a simple sentence.\n");
+    ui = (unsigned int)INT_MAX + 1024;
+    addr = (void *)0x7ffe637541f0;
+    _printf("Length:[%d, %i]\n", len, len);
+    printf("Length:[%d, %i]\n", len2, len2);
+    _printf("Negative:[%d]\n", -762534);
+    printf("Negative:[%d]\n", -762534);
+    _printf("Unsigned:[%u]\n", ui);
+    printf("Unsigned:[%u]\n", ui);
+    _printf("Unsigned octal:[%o]\n", ui);
+    printf("Unsigned octal:[%o]\n", ui);
+    _printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
+    printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
+    _printf("Character:[%c]\n", 'H');
+    printf("Character:[%c]\n", 'H');
+    _printf("String:[%s]\n", "I am a string !");
+    printf("String:[%s]\n", "I am a string !");
+    _printf("Address:[%p]\n", addr);
+    printf("Address:[%p]\n", addr);
+    len = _printf("Percent:[%%]\n");
+    len2 = printf("Percent:[%%]\n");
+    _printf("Len:[%d]\n", len);
+    printf("Len:[%d]\n", len2);
     return (0);
 }
