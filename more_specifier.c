@@ -78,13 +78,18 @@ int print_pointer(va_list args)
 
 	ptr_value = va_arg(args, unsigned int);
 	if (ptr_value == 0)
-		return _puts("(nil)");
+		return (_puts("(nil)"));
 	count = _puts("0x");
 	count += print_lower_hexa_uint(ptr_value);
 
 	return (count);
 }
-
+/**
+ * print_lower_hexa_uint - Prints an unsigned integer
+ * @n: The unsigned integer to be printed
+ *
+ * Return: The number of characters printed
+ */
 int print_lower_hexa_uint(unsigned int n)
 {
 	int count = 0;
