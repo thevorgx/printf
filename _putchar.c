@@ -14,7 +14,7 @@ int _putchar(char c)
 
 	if (c == flush_indice || buff_index >= 1024)
 	{
-		write (1, &buffer, buff_index);
+		write (1, buffer, buff_index);
 		buff_index = 0;
 	}
 	else
@@ -22,7 +22,7 @@ int _putchar(char c)
 		buffer[buff_index++] = c;
 	}
 
-	return (write(1, &buffer, buff_index));
+	return (write(1, buffer, buff_index));
 }
 /**
  * _puts - writes the string s
