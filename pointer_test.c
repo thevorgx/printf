@@ -1,12 +1,10 @@
-#include "main.h"
-
 /**
  * print_lower_hexa_uint - Prints an unsigned integer
  * @n: The unsigned integer to be printed
  *
  * Return: The number of characters printed
  */
-int print_lower_hexa_uint(unsigned int n)
+/**int print_lower_hexa_uint(unsigned int n)
 {
 	int count = 0;
 	int digit;
