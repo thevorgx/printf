@@ -117,4 +117,3 @@ int print_lower_hexa_uint(unsigned int n)
 
 	return (count);
 }
-

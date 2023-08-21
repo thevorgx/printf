@@ -7,6 +7,8 @@
 #include<stdio.h>
 #include<string.h>
 
+#define BUFFER_SIZE 1024
+
 int _printf(const char *format, ...);
 int _putchar(char c);
 
@@ -42,7 +44,6 @@ int print_upper_hexa(va_list args);
 int print_upper_hexa_char(unsigned char c);
 int print_string_S(va_list args);
 int print_pointer(va_list args);
-
 
 
 
