@@ -1,10 +1,6 @@
 #include "main.h"
 #include <unistd.h>
 #ifndef BUFFER_SIZE
-#define BUFFER_SIZE 1024
-#ifndef flush_indice
-#define flush_indice -1
-#endif
 /**
  * _putchar - writes the character c to stdout
  * @c: The character to print
@@ -13,12 +9,13 @@
  */
 int _putchar(char c)
 {
+	int flush_indice = -1;
 	static int buff_index = 0;
-	static char buffer[BUFFER_SIZE];
+	static char buffer[1024];
 
-	if (c == flush_indice || buff_index >= BUFFER_SIZE)
+	if (c == flush_indice || buff_index >= 1024)
 	{
-		write (1, buffer, buff_index);
+		write (1, &buffer, buff_index);
 		buff_index = 0;
 	}
 	else
