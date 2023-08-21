@@ -1,5 +1,6 @@
 #include "main.h"
-
+#define BUFFER_SIZE 1024
+#define flush_indice -1
 /**
  * _putchar - writes the character c to stdout
  * @c: The character to print
@@ -8,7 +9,20 @@
  */
 int _putchar(char c)
 {
-	return (write(1, &c, 1));
+	int buff_index = 0
+	char buffer[BUFFER_SIZE]
+
+	if (c == flush_indice || buff_index >= BUFFER_SIZE)
+	{
+		write (1, buffer, buff_index);
+		buff_index = 0;
+	}
+	else
+	{
+		buffer[buff_index++] = c
+	}
+
+	return (c)
 }
 /**
  * _puts - writes the string s
