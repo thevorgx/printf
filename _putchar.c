@@ -1,6 +1,5 @@
 #include "main.h"
 #include <unistd.h>
-#ifndef BUFFER_SIZE
 /**
  * _putchar - writes the character c to stdout
  * @c: The character to print
