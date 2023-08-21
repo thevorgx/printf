@@ -31,6 +31,7 @@ int _printf(const char *format, ...)
 	int i = 0;
 	int count = 0;
 	va_list args;
+	int spaces;
 
 	if (format == NULL)
 		return (-1);
@@ -42,14 +43,20 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			if (_check_valid_format(format[i + 1]) == 0)
+			spaces = 0;
+			while (format[i + 1] == ' ')
 			{
-				count += check_specifier(format[i + 1], args);
+				spaces++;
 				i++;
 			}
-			else if (format[i + 1] == '\0')
+			if (_check_valid_format(format[i + 1]) == 0)
 			{
-				return (-1);
+				if (spaces > 0)
+                {
+                    count += spaces;
+                }
+				count += check_specifier(format[i + 1], args);
+				i++;
 			}
 		}
 		else
