@@ -19,10 +19,11 @@ int print_unsigned(va_list args)
 	if (n == 4294967295)
 	{
 		count += _puts("4294967295");
-	return (count);
+		return (count);
 	}
 
-	count = _putint(n);
+	count = _putint_uns(n);
+
 	return (count);
 }
 /**
@@ -36,6 +37,7 @@ int print_octal(va_list args)
 	unsigned int n;
 	int i = 0;
 	char oc[33];
+	int j;
 
 	n = va_arg(args, unsigned int);
 	if (n == 0)
@@ -50,8 +52,10 @@ int print_octal(va_list args)
 		i++;
 		n /= 8;
 	}
-	_strrev(oc);
-	_puts(oc);
+	for (j = i - 1; j >= 0; j--)
+	{
+		_putchar(oc[j]);
+	}
 
 	return (i);
 }
@@ -65,7 +69,7 @@ int print_octal(va_list args)
 int print_lower_hexa(va_list args)
 {
 	unsigned int n;
-	int i = 0;
+	int i = 0, j;
 	char hex[33];
 	int remain;
 
@@ -91,8 +95,10 @@ int print_lower_hexa(va_list args)
 		n /= 16;
 	}
 
-	_strrev(hex);
-	_puts(hex);
+	for (j = i - 1; j >= 0; j--)
+	{
+		_putchar(hex[j]);
+	}
 
 	return (i);
 }
@@ -106,7 +112,7 @@ int print_lower_hexa(va_list args)
 int print_upper_hexa(va_list args)
 {
 	unsigned int n;
-	int i = 0;
+	int i = 0, j;
 	char hex[33];
 	int remain;
 
@@ -132,8 +138,10 @@ int print_upper_hexa(va_list args)
 		n /= 16;
 	}
 
-	_strrev(hex);
-	_puts(hex);
+	for (j = i - 1; j >= 0; j--)
+	{
+		_putchar(hex[j]);
+	}
 
 	return (i);
 }

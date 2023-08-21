@@ -25,3 +25,20 @@ int print_lower_hexa_uint(unsigned int n)
 
 	return (count);
 }
+/**
+ * _putint_uns - Prints an unsigned integer
+ * @n: The unsigned integer to be printed
+ *
+ * Return: The number of characters printed
+ */
+int _putint_uns(unsigned int n)
+{
+	int count = 0;
+
+	if (n / 10)
+		count += _putint_uns(n / 10);
+	_putchar(n % 10 + '0');
+	count++;
+
+	return (count);
+}
