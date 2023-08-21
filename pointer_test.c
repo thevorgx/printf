@@ -1,5 +1,5 @@
 #include "main.h"
-/*
+/**
  * print_lower_hexa_uint - Prints an unsigned integer
  * @n: The unsigned integer to be printed
  *
