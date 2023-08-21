@@ -9,8 +9,8 @@
  */
 int _putchar(char c)
 {
-	int buff_index = 0;
-	char buffer[BUFFER_SIZE];
+	static int buff_index = 0;
+	static char buffer[BUFFER_SIZE];
 
 	if (c == flush_indice || buff_index >= BUFFER_SIZE)
 	{
