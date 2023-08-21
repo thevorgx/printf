@@ -22,7 +22,7 @@ int _putchar(char c)
 		buffer[buff_index++] = c;
 	}
 
-	return (1);
+	return (c);
 }
 /**
  * _puts - writes the string s
