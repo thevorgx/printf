@@ -14,7 +14,7 @@ int _putchar(char c)
 
 	if (c == flush_indice || buff_index >= 1024)
 	{
-		write (1, buffer, buff_index);
+		write (1, &buffer, buff_index);
 		buff_index = 0;
 	}
 	else
