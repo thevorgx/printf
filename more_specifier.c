@@ -71,7 +71,7 @@ int print_upper_hexa_char(unsigned char c)
  *
  * Return: The number of characters printed
  */
-/*int print_pointer(va_list args)
+int print_pointer(va_list args)
 {
 	int count = 0;
 	unsigned int ptr_value;
@@ -84,37 +84,4 @@ int print_upper_hexa_char(unsigned char c)
 
 	return (count);
 }
-/**
- * print_lower_hexa_uint - Prints an unsigned integer
- * @n: The unsigned integer to be printed
- *
- * Return: The number of characters printed
- */
-/*int print_lower_hexa_uint(unsigned int n)
-{
-	int count = 0;
-	int first_digit, second_digit;
 
-	first_digit = n / 16;
-	if (first_digit < 10)
-	{
-		count += _putchar(first_digit + '0');
-	}
-	else
-	{
-		count += _putchar(first_digit - 10 + 'a');
-	}
-
-	second_digit = n % 16;
-	if (second_digit < 10)
-	{
-		count += _putchar(second_digit + '0');
-	}
-	else
-	{
-		count += _putchar(second_digit - 10 + 'a');
-	}
-
-	return (count);
-}
-*/
