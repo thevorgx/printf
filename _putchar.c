@@ -1,6 +1,10 @@
 #include "main.h"
+#include <unistd.h>
+#ifndef BUFFER_SIZE
 #define BUFFER_SIZE 1024
+#ifndef flush_indice
 #define flush_indice -1
+#endif
 /**
  * _putchar - writes the character c to stdout
  * @c: The character to print
