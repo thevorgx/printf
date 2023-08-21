@@ -43,30 +43,29 @@ int _puts(char *s)
  *
  * Return: count
  */
-
 int _putint(int n)
 {
-	int count = 0;
-	unsigned int num;
+    int count = 0;
+    unsigned int num;
 
-	if (n < 0 && n / 10 == 0)
-	{
-		_putchar ('-');
-		count++;
-		num = -n;
-	}
-	else
-	{
-		num = n;
-	}
+    if (n < 0)
+    {
+        _putchar('-');
+        count++;
+        num = -n;
+    }
+    else
+    {
+        num = n;
+    }
 
-	if (num / 10)
-	{
-		count += _putint(num / 10);
-	}
+    if (num / 10)
+    {
+        count += _putint(num / 10);
+    }
 
-	_putchar((num % 10) + '0');
-	count++;
+    _putchar((num % 10) + '0');
+    count++;
 
-	return (count);
+    return (count);
 }
