@@ -74,9 +74,9 @@ int print_upper_hexa_char(unsigned char c)
 int print_pointer(va_list args)
 {
 	int count = 0;
-	unsigned long int ptr_value;
+	unsigned int ptr_value;
 
-	ptr_value = va_arg(args, unsigned long int);
+	ptr_value = va_arg(args, unsigned int);
 	if (ptr_value == 0)
 		return (_puts("(nil)"));
 	count = _puts("0x");
