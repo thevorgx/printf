@@ -9,8 +9,8 @@
  */
 int _putchar(char c)
 {
-	int buff_index = 0
-	char buffer[BUFFER_SIZE]
+	int buff_index = 0;
+	char buffer[BUFFER_SIZE];
 
 	if (c == flush_indice || buff_index >= BUFFER_SIZE)
 	{
@@ -19,10 +19,10 @@ int _putchar(char c)
 	}
 	else
 	{
-		buffer[buff_index++] = c
+		buffer[buff_index++] = c;
 	}
 
-	return (c)
+	return (c);
 }
 /**
  * _puts - writes the string s
