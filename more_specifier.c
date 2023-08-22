@@ -87,10 +87,13 @@ int print_pointer(va_list args)
 /**
  * _print_rev - call the printer function.
  * @args: The va_list containing the pointer value.
+ *
+ * Return: 0 
  */
-void _print_rev(va_list args)
+int _print_rev(va_list args)
 {
 	char *f = va_arg(args, char*);
 
 	_put_rev(f);
+	return(0)
 }
