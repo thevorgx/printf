@@ -6,6 +6,7 @@
 #include<stdlib.h>
 #include<stdio.h>
 #include<string.h>
+#include<stdint.h>
 
 #define BUFFER_SIZE 1024
 
@@ -41,7 +42,7 @@ void _strrev(char *f);
 int print_unsigned(va_list args);
 int print_octal(va_list args);
 int print_lower_hexa(va_list args);
-int print_lower_hexa_uint(unsigned int n);
+int print_lower_hexa_uint(uintptr_t n);
 int print_upper_hexa(va_list args);
 int print_upper_hexa_char(unsigned char c);
 int print_string_S(va_list args);

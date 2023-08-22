@@ -74,13 +74,13 @@ int print_upper_hexa_char(unsigned char c)
 int print_pointer(va_list args)
 {
 	int count = 0;
-	unsigned int ptr_value;
+	void *ptr_value;
 
-	ptr_value = va_arg(args, unsigned int);
+	ptr_value = va_arg(args, void *);
 	if (ptr_value == 0)
 		return (_puts("(nil)"));
 	count = _puts("0x");
-	count += print_lower_hexa_uint(ptr_value);
+	count += print_lower_hexa_uint((uintptr_t)ptr_value);
 
 	return (count);
 }

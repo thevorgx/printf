@@ -5,24 +5,33 @@
  *
  * Return: The number of characters printed
  */
-int print_lower_hexa_uint(unsigned int n)
+int print_lower_hexa_uint(uintptr_t n)
 {
 	int count = 0;
-	int digit;
+	int digit, j, i = 0;
+	char hex[33];
 
 	if (n == 0)
 		return (_putchar('0'));
 
-	if (n > 0)
+	while (n > 0 && i < 32) // Limit to 32 hex digits
 	{
 		digit = n % 16;
-		count += print_lower_hexa_uint(n / 16);
 		if (digit < 10)
-			count += _putchar(digit + '0');
+		{
+			hex[i] = digit + '0';
+		}
 		else
-			count += _putchar(digit - 10 + 'a');
+		{
+			hex[i] = digit - 10 + 'a';
+		}
+		n /= 16;
+		i++;
 	}
-
+	for (j = i - 1; j >= 0; j--)
+	{
+		count += _putchar(hex[j]);
+	}
 	return (count);
 }
 /**
