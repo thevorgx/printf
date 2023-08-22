@@ -1,6 +1,6 @@
 #include "main.h"
 
-void _put_rev(char *f)
+int _put_rev(char *f)
 {
 	int length, i, j;
 	char temp;
@@ -21,4 +21,6 @@ void _put_rev(char *f)
 		_putchar(f[i]);
 		i++;
 	}
+	
+	return (i);
 }
