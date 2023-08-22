@@ -14,7 +14,7 @@ int print_lower_hexa_uint(uintptr_t n)
 	if (n == 0)
 		return (_putchar('0'));
 
-	while (n > 0 && i < 32) // Limit to 32 hex digits
+	while (n > 0 && i < 32)
 	{
 		digit = n % 16;
 		if (digit < 10)
