@@ -85,3 +85,8 @@ int print_pointer(va_list args)
 	return (count);
 }
 
+void _print_rev(va_list args)
+{
+	char *f = va_arg(args, char*);
+	_put_rev(f);
+}
