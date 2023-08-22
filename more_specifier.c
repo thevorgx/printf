@@ -95,5 +95,6 @@ int _print_rev(va_list args)
 	char *f = va_arg(args, char*);
 
 	_put_rev(f);
-	return(0)
+
+	return(0);
 }
