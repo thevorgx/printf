@@ -92,7 +92,10 @@ int print_pointer(va_list args)
  */
 int _print_rev(va_list args)
 {
-	void *f = va_arg(args, void*);
+	char *f = va_arg(args, char*);
 
-	return(_print_rev(f));
+	_put_rev(f);
+
+	return (_strlen(f));
+
 }

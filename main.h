@@ -48,7 +48,8 @@ int print_upper_hexa_char(unsigned char c);
 int print_string_S(va_list args);
 int print_pointer(va_list args);
 int _print_rev(va_list args);
-int _put_rev(char *f);
+void _put_rev(char *f);
+void _custom_str(char *custom_f);
 
 
 #endif

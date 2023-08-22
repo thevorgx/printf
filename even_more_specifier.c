@@ -1,26 +1,22 @@
 #include "main.h"
 
-int _put_rev(char *f)
+void _custom_str(char *custom_f)
 {
-	int length, i, j;
-	char temp;
+    int length = 0;
+    int i =0;
 
-	length = _strlen(f);
+    while (custom_f[length] != '\0')
+    {
+        length++;
+    }
 
-	for (i = 0, j = length - 1; i < j; i++, j--)
-	{
-		temp = f[i];
-		f[i] = f[j];
-		f[j] = temp;
-	}
+    for (i = length - 1; i >= 0; i--)
+    {
+        _putchar(custom_f[i]);
+    }
+}
 
-	i = 0;
-
-	while (f[i] != '\0')
-	{
-		_putchar(f[i]);
-		i++;
-	}
-	
-	return (i);
+void _put_rev(char *f)
+{
+    _custom_str(f);
 }
