@@ -150,5 +150,5 @@ alex@ubuntu:~/c/printf$
 
 ### Printf project Authors:
 
-- ercudu75
-- thevorgx
+- [ercudu75](https://github.com/ercudu75)
+- [thevorgx](https://github.com/thevorgx)
